@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img
+      src="img/_cb5ce681-e2a5-421c-b016-f629cd2fa99e.jpeg"
+      alt=""
+      style=" max-width: 50%;
+      height: auto;
+      display: block;
+      margin: 0 auto;"
+    />
+    <div id="wrap"></div>
+
+    <script>
+      //=========================================================================================================================
+      // penulisan javascript internal
+      // 1. memilih id wrap, 2. metode innerHTML = konten
+      document.getElementById("wrap").innerHTML = "Ega Destaviano";
+
+      //=========================================================================================================================
+      // deklarasi variable
+      // ---------------------
+      // nama dimulai dengan huruf atau $
+      // nama itu case sensitive
+      // nggak boleh meggunakan nama variable yang sama
+      var x = 123456;
+      var uang = 627442;
+
+      //=========================================================================================================================
+      // tipe data string
+      var kata = "selamat";
+
+      //=========================================================================================================================
+      // tipe data number/angka
+      var angka = 182;
+      var angka2 = 172;
+      var angka3 = angka + angka2;
+      angka += angka2;
+
+      // operator aritmatika + - * / ? %
+      var angka4 = angka2 * angka3;
+
+      // angkabaru++;//increment menjumlahkan 1
+      // angkabaru--;//increment mengurangi 1
+
+      //=========================================================================================================================
+      // metode number
+      // toFixed(n), toString(), random(), min(a,b,c), max(a,b,c)
+      var angka3 = Math.min(angka, angka2, angka3);
+
+      //=========================================================================================================================
+      // round() ceil() floor() object Methods(log, abs)
+      // random spesifik Math.floor(Math.random() * x) + 1
+
+      //=========================================================================================================================
+      // metode string
+      // length indexOf lastIndexof search Chart
+      // toUpperCase() toLowerCase() replace
+      // substring(start, end) substr (start, length)
+      // parseInt parseFloat
+      var str = "Hello World!";
+      var hasil = str.replace("World", "hgshc");
+
+      //=========================================================================================================================
+      // fungsi
+      function printText() {
+        alert("Selamat Datang!");
+        document.getElementById("wrap").innerHTML = "jhuhs";
+      }
+
+      function printText(nama) {
+        // 4. var nama + asep = nama
+        var jj = nama + "siap"; // 5. nama + siap
+        document.getElementById("wrap").innerHTML = jj; // 6. nama + siap = johan asep siap
+      }
+
+      //=========================================================================================================================
+      // memanggil fungsi
+      var nama = "johan"; // 1. pertama membuat variabel nama
+      printText(nama + "asep"); // 2. var nama + asep
+
+      //=========================================================================================================================
+      // parameter pada fungsi
+      function printText(nama, nama2) {
+        var jj = nama + nama2 + "siap";
+        document.getElementById("wrap").innerHTML = jj;
+      }
+
+      //=========================================================================================================================
+      // memanggil fungsi
+      printText("jihan", "asep");
+
+      //=========================================================================================================================
+      // return pada javascript
+      function printText() {
+        return "jihnn";
+      }
+
+      var text = printText() + " yang baru";
+      document.getElementById('wrap').innerHTML = text;
+
+      //=========================================================================================================================
+      // scope di javascript
+      // global var & local var
+      // global
+      var text = "selamat datang";
+
+      function printText() {
+        var text2 = "situs";
+      }
+      document.getElementById('wrap').innerHTML = text;
+      printText();
+
+      //=========================================================================================================================
+      // tipe data array
+      var kotak = ['asep', 'asta', 'siap'];
+      kotak[2] = "ahnann";
+      document.getElementById('wrap').innerHTML = kotak[2];
+
+      //=========================================================================================================================
+      // tipe data array
+      // array di mulai dari 0
+      // sort, reverse, concat, length, join("separator")
+      var kotak = ['asep', 'asta', 'siap'];
+      var kotak1 = ['jbbxsbj', 'dcsd', 'cbcj'];
+
+      var total = kotak.concat(kotak1);
+      document.getElementById("wrap").innerHTML = total.join('|');
+
+      // splice -> add(mulai, dihapus, isi), splice -> remove
+      // pop, push, shift(), unshift
+      // kotak.splice(2, 0, "aeepe",)
+
+      // kotak.pop();
+      // kotak.push();
+
+      //=========================================================================================================================
+      // tipe data boolean
+      var x = true;
+      var y = false;
+
+      // if & else
+      var uang = 3000;
+      var barang = 2500;
+      var harga = 3000;
+      if (uang == barang) {
+        document.getElementById('wrap').innerHTML = "transaksi ok";
+      } else {
+        document.getElementById('wrap').innerHTML = "tidak sama";
+      }
+
+      // operator logika != == < > <= >=
+      // dan && atau ||
+      // true false
+      if (barang == harga) {
+        document.getElementById("wrap").innerHTML = "uang ok";
+      } else {
+        document.getElementById("wrap").innerHTML = "uang tidak mencukupi";
+        // document
+      }
+
+      // nested if
+      var uang = 1000;
+      var barang = 2500;
+      var harga = 3000;
+
+      if (uang > harga) {
+        if (uang > harga * 2) {
+          document.getElementById("wrap").innerHTML = "uang mu kebanyakan bro";
+        } else {
+          document.getElementById("wrap").innerHTML = "kamu bisa beli 1";
+        }
+      } else {
+        document.getElementById("wrap").innerHTML = "uang ga cukup";
+      }
+
+      //=========================================================================================================================
+      // switch case
+      var name = "ega";
+      switch (name) {
+        case "ega":
+          document.getElementById("wrap").innerHTML = "Halo ega";
+          break;
+        case "supri":
+          document.getElementById("wrap").innerHTML = "Halo supri";
+          break;
+        case "nunung":
+          document.getElementById("wrap").innerHTML = "Halo nunung";
+          break;
+        default:
+          document.getElementById("wrap").innerHTML = name;
+      }
+
+      //=========================================================================================================================
+
+      // pengulangan
+    for(var i=0; i<5; i++){
+        document.getElementById("wrap").innerHTML = i;
+    }
+    var i=0;
+    var text = "";
+    while(i<5){
+      text += "<br>angka nya" + i;
+      i++;
+    }
+    document.getElementById("wrap").innerHTML = i;
+
+    // debug
+    var x ="nhbscbs";
+    alert("hai boy");
+
+    </script>
+
+<!--========================================================================================================================= --> -->
+    <!-- penulisan javascript eksternal -->
+    <!-- <script src="main.js"></script> -->
+  </body>
+</html> 
